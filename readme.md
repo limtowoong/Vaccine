@@ -1,5 +1,7 @@
 <br>
 
+<div align="center">
+	
 백신 예약 프로그램
 =
 
@@ -15,6 +17,8 @@
 
 <br>
 
+</div>
+
 ```javascript
 String sql =" select max(RESVNO) from TBL_VACCRESV_202108 " ;
 
@@ -26,8 +30,12 @@ rs.next();
 int num = rs.getInt(1)+1;
 ```
 
+<div align="center">
+
 ### 테이블에 있는 마지막 예약번호에 +1 한 값을 num에 넣어줍니다.
 
+</div>
+	
 <br><br><br>
 
 ```html
