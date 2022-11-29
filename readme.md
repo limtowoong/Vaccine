@@ -44,15 +44,20 @@ int num = rs.getInt(1)+1;
   <td><input type="text" name="RESVNO" readonly="readonly" value="<%=num%>"> 예)20210011</td>
 </tr>
 ```
+
+<div align="center">
+
 ### readonly를 사용하여 읽기전용으로 바꾸고   
 ### value에는 위 스크립트문에 있는 num값을 가져와서 자동발생을 시켜줍니다.
-
+	
 <br><br><br>
 
 ![image](https://user-images.githubusercontent.com/104752202/201843540-f581f8ef-6d04-4dd9-9f7b-29a2e77a345f.png)
 
 <br>
 
+</div>
+	
 ```javascript
 String sql = "insert into TBL_VACCRESV_202108 values(?,?,?,?,?,?)";
 
@@ -70,6 +75,8 @@ ps.setString(6, request.getParameter("VCODE"));
 
 ps.executeUpdate();
 ```
+
+<div align="center">
 
 ### 입력받은 값을 데이터에 맞게 테이블에 저장시켜줍니다.
 
@@ -95,6 +102,8 @@ ps.executeUpdate();
 
 ![image](https://user-images.githubusercontent.com/104752202/201843858-ea53b62b-af50-4deb-81b4-4e2c173d50d2.png)
 
+</div>
+	
 ```javascript
 int RESVNO = Integer.parseInt(request.getParameter("RESVNO"));
 
@@ -131,12 +140,16 @@ sb.append(" select v.RESVNO                                                     
 .append(" and v.RESVNO =").append(RESVNO);
 ```
 
+<div align="center">
+
 ### 입력받은 예약번호와 일치하는 테이블 정보를 쿼리문 조건에 맞게 조회해줍니다.
 
 <br><br><br>
 
 ![image](https://user-images.githubusercontent.com/104752202/201843907-c023f82c-0e95-4adc-9f1b-f3105ebcc9d5.png)
 
+</div>
+	
 ```html
 <p class="co">예약번호 <%=i_resvno%>님의 예약조회
 <%if(rs.next()){ %>
@@ -168,12 +181,16 @@ sb.append(" select v.RESVNO                                                     
 <%} %>
 ```
 
+<div align="center">
+
 ### 입력받은 예약번호와 일치하는 번호가 없으면 else문을 출력합니다.
 
 <br><br><br>
 
 ![image](https://user-images.githubusercontent.com/104752202/201857302-0508be94-b5ff-4933-b6fe-286b95665a46.png)
 
+</div>
+	
 ```html
 <table class="table_line align_center">
 	<tr>
@@ -199,9 +216,13 @@ sb.append(" select v.RESVNO                                                     
 </table>
 ```
 
+<div align="center">
+
 ### while문에 쿼리문을 조건으로 rs.getString을 반복해줍니다.
 ### 반복할 때 마다 sum에 rs.getString값들을 넣어주고 총합을 표시합니다.
 
+</div>
+	
 <br><br><br>
 
 - - -
